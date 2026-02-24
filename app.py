@@ -260,9 +260,9 @@ def render_guess_section():
             st.session_state.guess_A = guess_A
             real_B = get_role_name_by_code(st.session_state.role_B_code) if st.session_state.role_B_code else "알 수 없음"
             if guess_A.strip() == real_B:
-                st.session_state.result_A = f"정답! 플레이어 B의 정체는 **{real_B}** 입니다."
+                st.session_state.result_A = f"정답! 어떻게 알아낸거지?! 플레이어 B의 정체는 **{real_B}** 입니다."
             else:
-                st.session_state.result_A = f"오답. 실제 플레이어 B의 정체는 **{real_B}** 입니다."
+                st.session_state.result_A = f"오답이지롱. 실제 플레이어 B의 정체는 **{real_B}** 입니다."
         if st.session_state.result_A:
             st.success(st.session_state.result_A)
 
